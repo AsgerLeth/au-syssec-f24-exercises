@@ -31,6 +31,7 @@ def main(bits, message):
     # encryption
 
     m = message % N
+    #m = message
     enc = pow(m, e, N)
     dec = pow(enc, d, N)
     print()

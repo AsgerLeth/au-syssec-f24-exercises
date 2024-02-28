@@ -22,9 +22,20 @@ def sha256(message: bytes) -> bytes:
 
     # initial value of the internal state
     internal_state = b'j\t\xe6g\xbbg\xae\x85<n\xf3r\xa5O\xf5:Q\x0eR\x7f\x9b\x05h\x8c\x1f\x83\xd9\xab[\xe0\xcd\x19'
+    padding_msg = build_padding(len(message))
+    print("padded size =", padded_size(len(padding_msg)))
+    #assert(padding_msg % 512 == 0)
+    chunks = split_chunks(padding_msg)
+    list = []
+    for chunk in chunks:
+        msg_com = compress(chunk ,internal_state)
+    print(msg_com)
 
-    # TODO implement this
-    pass
+    
+
+
+    
+    
 
 
 def sha256_extend(given_hash: bytes, prefix_length: int, message_suffix: bytes) -> bytes:
