@@ -1,0 +1,5 @@
+gcc -o overflow3 -Wall -Wextra -O0  -fno-stack-protector -no-pie -z execstack overflow3.c
+clang: warning: argument unused during compilation: '-no-pie' [-Wunused-command-line-argument]
+ld: unknown options: -z 
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [Makefile:28: overflow3] Error 1

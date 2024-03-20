@@ -24,8 +24,8 @@ overflow1: overflow1.c
 overflow2: overflow2.c
 	$(CC) -o $@ $(CFLAGS) $^
 
-overflow3: overflow3.c
-	$(CC) -o $@ $(CFLAGS) -z execstack $^
+#overflow3: overflow3.c
+#	$(CC) -o $@ $(CFLAGS) -z execstack $^
 
 
 clean:
